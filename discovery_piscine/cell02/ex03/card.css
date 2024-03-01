@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 80px;
+    align-self: center;
+}
+.profilo{
+    align-self: center;
+}
+.imgProfilo {
+    height: 100px;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+.img1{
+    height: 50px;
+}
+.img2{
+    height: 40px;
+}
+.img3{
+    height: 40px;
+}
+
+
+.tabella {
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(168, 168, 168);
+}
+
+.tabella .riga1 {
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(99, 100, 100);
+}
+.riga2 {
+    display: flex;
+    justify-content: center;
+}
+.riga3 {
+    display: flex;
+    justify-content: center;
+}
+.riga4 {
+    display: flex;
+    justify-content: space-between;
+}
+.riga5 {
+    display: flex;
+    justify-content: center;
+}
+button {
+    background-color: rgb(168, 168, 168);
+    border: none;
+}
+button:hover {background-color: rgb(64, 179, 179);}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balloon</title>
+<!--CSS-->
+<style>
+    body {
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #container {
+        width: 100%;    
+        display: flex;
+        justify-content: center;
+    }
+    #balloon {
+        border-radius: 100%;
+        background-color: red;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+</head>
+<!--HTML-->
+<body>
+    <span id="container">
+        <div onmousedown="espandiin()" onmouseout="restringiout()" id="balloon"></div> 
+    </span>
+</body>
+<!--JavaScript-->
+<script>
+
+    //DICHIARAZIONE DELLE VARIABILI
+    let rColor = 255;
+    let gColor = 0;
+    let bColor = 0;
+    let ciclo = 0;
+    let ciclo2 = 0;
+
+    //FUNZIONE PER IL CLICK DEL PALLONCINO
+    function espandiin() {
+        let x = balloon.clientHeight+10;
+        if (ciclo>=0 && ciclo<=6) {
+            rColor -= 36;
+            gColor += 36;
+            let color = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+            document.getElementById("balloon").style.width = x + "px";
+            document.getElementById("balloon").style.height = x + "px";
+            document.getElementById("balloon").style.backgroundColor = color;
+            ciclo += 1;
+        } else if (ciclo>=7 && ciclo<=13) {
+            rColor = 0;
+            gColor -= 36;
+            bColor += 36;
+            let color2 = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+            document.getElementById("balloon").style.width = x + "px";
+            document.getElementById("balloon").style.height = x + "px";
+            document.getElementById("balloon").style.backgroundColor = color2;
+            ciclo += 1;
+        } else {
+            if (x < 420) {
+                gColor = 0;
+                bColor -= 36;
+                rColor += 36;
+                let color3 = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+                document.getElementById("balloon").style.width = x + "px";
+                document.getElementById("balloon").style.height = x + "px";
+                document.getElementById("balloon").style.backgroundColor = color3;
+                ciclo += 1;
+            } else {
+                document.getElementById("balloon").style.width = 200 + "px";
+                document.getElementById("balloon").style.height = 200 + "px";
+                rColor = 255;
+                gColor = 0;
+                bColor = 0;
+                ciclo = 0;
+                let color4 = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+                document.getElementById("balloon").style.backgroundColor = color4;
+                alert("il balloncino è esploso");
+            }
+        }
+    }
+    //FUNZIONE PER L'USCITA DEL MOUSE DAL PALLONCINO
+    function restringiout() {
+        let x = balloon.clientHeight-5;
+        if (ciclo2 == 1) {
+                    if (ciclo != 0){
+                        ciclo -= 1;
+                    }
+                    ciclo2 = 0;
+                } else {
+                    ciclo2 = 1;
+                }
+        if (ciclo>=0 && ciclo<=6) {
+            if (x > 195) {
+                bColor = 0;
+                rColor += 18;
+                gColor -= 18;
+                let color = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+                document.getElementById("balloon").style.width = x + "px";
+                document.getElementById("balloon").style.height = x + "px";
+                document.getElementById("balloon").style.backgroundColor = color;
+            }
+        } else if (ciclo>=7 && ciclo<=13) {
+                rColor = 0;
+                gColor += 18;
+                bColor -= 18;
+                let color = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+                document.getElementById("balloon").style.width = x + "px";
+                document.getElementById("balloon").style.height = x + "px";
+                document.getElementById("balloon").style.backgroundColor = color;
+        } else {
+                gColor = 0;
+                bColor += 18;
+                rColor -= 18;
+                let color = 'rgb(' + rColor + ',' + gColor + ',' + bColor + ')';
+                document.getElementById("balloon").style.width = x + "px";
+                document.getElementById("balloon").style.height = x + "px";
+                document.getElementById("balloon").style.backgroundColor = color;
+        }
+    }
+</script>
+</html>

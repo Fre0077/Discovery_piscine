@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            font-family: 'Courier New', monospace;
+        }
+        html, body {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        /* menu laterale*/
+        .menu-laterale {
+            border-left: 4px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            height: 1080px;
+            background-color: #13D7ED;
+            position: fixed;
+        }
+        .schifo {
+            width: 20%;
+            height: 1080px;
+        }
+        .ritorno  {
+            margin-top: 15px;
+            margin-bottom: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: rgba(19, 146, 237, 0.651);
+            border: 2px solid black;
+        }
+        .navigazione {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: rgba(19, 146, 237, 0.651);
+            border: 2px solid black;
+        }
+        .papera {
+            width: 200px;
+            height: 200px;
+            background-image: url(images.jpeg);
+            background-size:contain;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            margin-top: 30px;
+            border: 4px solid black;
+        }
+
+
+        /*varie parti della pagina principale*/
+        .profilo {
+            width: 80%;
+        }
+        .part1, .part2, .part3 {
+            height: 1080px;
+            width:100%;
+        }
+        .barra {
+            background-color: rgba(19, 146, 237, 0.651);
+            height: 20px;
+        }
+        .part1 {
+            background-image: url(Hacker\ Background\ 1.jpg);
+            background-size:contain;
+            background-size: cover;
+        }
+        .part2 {
+            background-image: url(m2yw6fb2tvq81.jpg);
+            background-size:contain;
+            background-size: cover;
+        }
+        .part3 {
+            background-image: url(wallpapersden.com_starry-sky-hd-dark-blue-night_2912x1632.jpg);
+            background-size:contain;
+            background-size: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-laterale">
+            <div class="papera">
+            </div>
+                <div class="ritorno" onmousedown="home()">
+                    <h2>home</h2>
+                </div>
+                <div class="navigazione" onmousedown="part1()">
+                    <h3>general</h3>
+                </div>
+                <div class="navigazione" onmousedown="part2()">
+                    <h3>skill</h3>
+                </div>
+                <div class="navigazione" onmousedown="part3()">
+                    <h3>contact</h3>
+                </div>
+        </div>
+        <div class="schifo"></div>
+        <div class="profilo">
+            <section id="part1" class="part1">
+                <h1>qui siamo i primi</h1>
+            </section>
+            <div class="barra"></div>
+            <section id="part2" class="part2">
+                <h1>qui invece i secondi </h1>
+            </section>
+            <div class="barra"></div>
+            <section id="part3" class="part3">
+                <h1>qui siamio delle merde</h1>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    function home() {
+        window.location.href = 'profilo.html';
+    }
+    function part1() {
+        window.location.href = '#part1';
+    }
+    function part2() {
+        window.location.href = '#part2';
+    }
+    function part3() {
+        window.location.href = '#part3';
+    }
+</script>
+</html>

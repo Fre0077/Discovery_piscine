@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profilo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            font-family: 'Courier New', monospace;
+        }
+        html, body{
+            width: 100%;
+        }
+        body {
+            background-image: url(42Firenze-Luiss.jpg);
+            display: flex;
+            justify-content: flex-end;
+        }
+        .container {
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            margin-top: 30%;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .navigazione {
+            border: 3px solid black;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            width: 40%;
+            height: 150px;
+            background-color: #13D7ED;
+            border-radius: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+        .navigazione:hover {background-color: #0fa7b8;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>I MIGLIORI PISCINANDI DI SEMPRE!!!</h1>
+        </div>
+        <div class="description">
+            <h4 style="text-align: center;">Cliccando troverai i curriculum e contatti dei<br> rispettivi piscinandi sotto indicati</h4>
+        </div>
+            <div class="navigazione" onmousedown="desso()">
+                <h1>desso</h1>
+            </div>
+            <div class="navigazione" onmousedown="bosca()">
+                <h1>bosca</h1>
+            </div>
+    </div>
+</body>
+<script>
+    function desso() {
+        window.location.href = 'desso.html';
+    }
+    function bosca() {
+        window.location.href = 'bosca.html';
+    }
+</script>
+</html>

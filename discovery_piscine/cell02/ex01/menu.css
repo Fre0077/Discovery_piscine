@@ -1,0 +1,15 @@
+.lista {
+    display: none;
+    width: 100px;
+    border: 2px solid rgba(160, 160, 160, 0.356);
+}
+.lista p{
+    display: block  ;
+}
+.btn {
+    border: none;
+    background-color: rgb(218, 221, 221);
+}
+
+.divMenu:hover .lista {display: block;}
+.btn:hover {background-color: rgb(184, 182, 182);}
